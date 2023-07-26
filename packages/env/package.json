@@ -1,0 +1,12 @@
+{
+  "name": "@ideaair/monitor-env",
+  "version": "0.0.1",
+  "description": "System env",
+  "author": "season <997432833lixuan@gmail.com> (https://github.com/muziyan)",
+  "license": "MIT",
+  "keywords": [
+    "env"
+  ],
+  "main": "index.ts",
+  "types": "index.ts"
+}
