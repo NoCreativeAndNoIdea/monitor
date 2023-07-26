@@ -217,3 +217,8 @@ Temporary Items
 
 
 .idea
+
+.turbo
+.rollup.cache
+**/dist
+**/tsconfig.tsbuildinfo
