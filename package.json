@@ -1,0 +1,31 @@
+{
+  "name": "@ideaair/monitor-monorepo",
+  "version": "0.0.1",
+  "private": true,
+  "description": "",
+  "author": "season <997432833lixuan@gmail.com> (https://github.com/muziyan)",
+  "license": "MIT",
+  "keywords": [],
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint",
+    "lint:fix": "eslint . --fix",
+    "prepare": "husky install",
+    "commitlint": "commitlint --edit",
+    "changelog": "pnpm conventional-changelog -p angular -i CHANGELOG.md -s"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.6.7",
+    "@commitlint/config-conventional": "^17.6.7",
+    "@ideaair/eslint-config-ts": "^0.0.3",
+    "@types/eslint": "^8.44.1",
+    "@types/node": "^20.4.5",
+    "conventional-changelog-cli": "^3.0.0",
+    "eslint": "^8.45.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "husky": "^8.0.3",
+    "prettier": "^3.0.0",
+    "typescript": "^5.1.6"
+  }
+}
