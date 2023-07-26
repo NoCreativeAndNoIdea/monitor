@@ -1,0 +1,13 @@
+{
+  "name": "@ideaair/monitor-shared",
+  "version": "0.0.1",
+  "description": "shared",
+  "author": "season <997432833lixuan@gmail.com> (https://github.com/muziyan)",
+  "license": "MIT",
+  "keywords": [],
+  "main": "index.ts",
+  "types": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
