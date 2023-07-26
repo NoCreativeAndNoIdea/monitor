@@ -1,0 +1,37 @@
+{
+  "name": "@ideaair/monitor-sdk",
+  "type": "module",
+  "version": "0.0.1",
+  "description": "A monitor track sdk.",
+  "author": "season <997432833lixuan@gmail.com> (https://github.com/muziyan)",
+  "license": "MIT",
+  "keywords": [
+    "sdk"
+  ],
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/*",
+    "package.json",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "rollup -c rollup.config.js",
+    "dev": "pnpm build -w",
+    "test": "vitest run",
+    "test:watch": "vitest watch",
+    "test:ui": "vitest --ui"
+  },
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^11.1.2",
+    "@types/rollup": "^0.54.0",
+    "rollup": "^3.26.3",
+    "typescript": "^5.1.6"
+  }
+}
