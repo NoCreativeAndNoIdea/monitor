@@ -7,5 +7,5 @@
     "declarationDir": "dist",
     "noEmit": true
   },
-  "include": ["src/**/*.ts", "rollup.config.ts", "tests/**/*.ts"]
+  "include": ["src/**/*.ts", "tests/**/*.ts"]
 }

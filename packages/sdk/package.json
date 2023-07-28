@@ -1,6 +1,5 @@
 {
   "name": "@ideaair/monitor-sdk",
-  "type": "module",
   "version": "0.0.1",
   "description": "A monitor track sdk.",
   "author": "season <997432833lixuan@gmail.com> (https://github.com/muziyan)",
@@ -22,13 +21,18 @@
     "README.md"
   ],
   "scripts": {
-    "build": "rollup -c rollup.config.js",
-    "dev": "pnpm build -w"
+    "build": "vite build",
+    "dev": "vite build -w",
+    "test": "vitest run",
+    "test:watch": "vitest watch",
+    "test:ui": "vitest --ui"
+  },
+  "dependencies": {
+    "axios": "^1.4.0"
   },
   "devDependencies": {
-    "@rollup/plugin-typescript": "^11.1.2",
-    "@types/rollup": "^0.54.0",
-    "rollup": "^3.26.3",
+    "@ideaair/monitor-env": "workspace:^",
+    "@ideaair/monitor-shared": "workspace:^",
     "typescript": "^5.1.6"
   }
 }
