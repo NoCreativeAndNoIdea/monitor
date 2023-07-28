@@ -6,7 +6,9 @@ const configs = {
   extends: ['@ideaair/eslint-config-ts', 'prettier'],
   plugins: ['prettier'],
   rules: {
-    'prettier/prettier': 'error'
+    'prettier/prettier': 'error',
+    complexity: ['error', 5],
+    'no-duplicate-imports': 'off'
   }
 }
 module.exports = configs
