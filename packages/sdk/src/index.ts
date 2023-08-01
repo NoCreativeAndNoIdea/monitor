@@ -1,5 +1,5 @@
-export function monitorSdk() {}
+import { initLogger, loadConfigs, report, reportRequest, setPrefix } from './common'
 
-export const monitorConfig = () => {}
+export type { ReportType, ReportData, RequestData } from './common'
 
-export const demo = (num: number) => num * num
+export { loadConfigs, initLogger, report, reportRequest, setPrefix }
