@@ -61,6 +61,9 @@ const reportService = (data: ReportData[]) =>
       })
   })
 
-export const reportRequest = () => {
+export const reportRequest = (): Promise<unknown> => {
+  if (!reportQueue.length) {
+    return Promise.resolve()
+  }
   return reportService([...reportQueue])
 }

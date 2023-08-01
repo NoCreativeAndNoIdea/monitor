@@ -6,7 +6,7 @@ import { safeArray } from '@ideaair/monitor-shared'
 import { describe, expect, it } from 'vitest'
 import { loadConfigs } from '../src'
 import { initLogger, request } from '../src/common'
-import type { ReportData, RequestData } from '../src/common'
+import type { ReportData, RequestData } from '../src'
 
 loadConfigs({
   appId: 'Test',

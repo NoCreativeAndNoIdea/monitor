@@ -44,10 +44,10 @@ const defaultConfigs: Required<MonitorConfigs> = {
 
 let _configs: Required<MonitorConfigs> | null = null
 
-export const loadConfigs = (configs: MonitorConfigs) => {
+export const loadConfigs = (configs?: MonitorConfigs) => {
   _configs = {
     ...defaultConfigs,
-    ...configs
+    ...(configs || {})
   }
 }
 
