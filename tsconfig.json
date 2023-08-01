@@ -19,7 +19,8 @@
     "baseUrl": ".",
     "paths": {
       "@ideaair/monitor-shared/*": ["packages/shared/*"],
-      "@ideaair/monitor-env/*": ["packages/env/*"]
+      "@ideaair/monitor-env/*": ["packages/env/*"],
+      "@ideaair/monitor-sdk/*": ["packages/sdk"]
     }
   },
   "references": [

@@ -9,14 +9,14 @@
   ],
   "exports": {
     ".": {
-      "require": "./dist/index.cjs",
-      "import": "./dist/index.mjs"
+      "require": "./dist/index.cjs.js",
+      "import": "./dist/index.es.js"
     }
   },
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "main": "./dist/index.es.js",
+  "types": "dist/index.d.ts",
   "files": [
-    "dist/*",
+    "dist/**/*.*",
     "package.json",
     "README.md"
   ],
@@ -33,6 +33,7 @@
   "devDependencies": {
     "@ideaair/monitor-env": "workspace:^",
     "@ideaair/monitor-shared": "workspace:^",
-    "typescript": "^5.1.6"
+    "typescript": "^5.1.6",
+    "vite-plugin-dts": "^3.4.0"
   }
 }

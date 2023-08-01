@@ -3,7 +3,7 @@
  */
 const configs = {
   root: true,
-  extends: ['@ideaair/eslint-config-ts', 'prettier'],
+  extends: ['@ideaair/eslint-config-ts', '@ideaair/eslint-config-react', 'prettier'],
   plugins: ['prettier'],
   rules: {
     'prettier/prettier': 'error',
