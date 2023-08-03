@@ -1,0 +1,19 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("POSTGRE_DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "./generated/postgre"
+}
+
+model Workspace {
+  id    Int     @id @default(autoincrement())
+  appId String  @default(uuid())
+  name  String
+  cover String?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
