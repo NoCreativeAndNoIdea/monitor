@@ -4,18 +4,20 @@ import { createRoot } from 'react-dom/client'
 
 initBrowser({
   appId: 'Test',
-  logger: true
+  logger: true,
+  reportUrl: 'http://localhost:10086/monitor/report-data/send-beacon'
 })
 
 const App = () => {
   const [visible, setVisible] = useState(false)
   const handleClickError = () => {
     // Console.count('click error')
-    setVisible((pre) => !pre)
+    // SetVisible((pre) => !pre)
     // Throw new Error('Custom error!')
     // New Promise((resolve, reject) => {
     //   Reject('de')
     // })
+    setVisible((prevState) => !prevState)
   }
 
   return (

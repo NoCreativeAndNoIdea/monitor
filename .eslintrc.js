@@ -23,7 +23,8 @@ const configs = {
   rules: {
     'prettier/prettier': 'error',
     complexity: ['error', 5],
-    'no-duplicate-imports': 'off'
+    'no-duplicate-imports': 'off',
+    'max-lines-per-function': ['error', 50]
   }
 }
 module.exports = configs

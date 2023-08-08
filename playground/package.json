@@ -1,5 +1,6 @@
 {
   "name": "playground",
+  "type": "module",
   "version": "0.0.1",
   "description": "",
   "author": "season <997432833lixuan@gmail.com> (https://github.com/muziyan)",

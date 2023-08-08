@@ -28,7 +28,8 @@
     "test:ui": "vitest --ui"
   },
   "dependencies": {
-    "axios": "^1.4.0"
+    "axios": "^1.4.0",
+    "nanoid": "^4.0.2"
   },
   "devDependencies": {
     "@ideaair/monitor-env": "workspace:^",

@@ -1,3 +1,4 @@
+import { isBrowser } from '@ideaair/monitor-env'
 import { isFunction, isPromise } from '@ideaair/monitor-shared'
 import axios from 'axios'
 import { getConfigs } from './config'
@@ -5,9 +6,11 @@ import { error, formatMsgByObj, info } from './logger'
 import type { CustomRequest, RequestData } from './constant'
 
 export const request = (data: RequestData) => {
-  const reportUrl = getConfigs('reportUrl')
-  const requestConfig = getConfigs('requestConfig')
-  const customRequest = getConfigs<CustomRequest>('customRequest')
+  const [reportUrl, requestConfig, customRequest] = [
+    getConfigs('reportUrl'),
+    getConfigs('requestConfig'),
+    getConfigs<CustomRequest>('customRequest')
+  ]
 
   return new Promise((resolve, reject) => {
     info(formatMsgByObj(data), 'RequestData')
@@ -21,6 +24,11 @@ export const request = (data: RequestData) => {
       if (isPromise(res)) {
         res.then(resolve).catch(rejectCallback)
       }
+    } else if (isBrowser) {
+      navigator.sendBeacon(
+        reportUrl,
+        new Blob([JSON.stringify(data)], { type: 'application/json' })
+      )
     } else {
       axios
         .post(reportUrl, {

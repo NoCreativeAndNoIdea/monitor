@@ -1,12 +1,14 @@
 import type { Arrayable, Data } from '@ideaair/monitor-shared'
 
-export type ReportType = 'log' | 'error' | string
-
 export interface ReportData extends Data {
-  type: ReportType
-  data?: Arrayable<Data>
+  reportId: string
+  level: string
+  type: string
+  message: string
+  data?: Record<string, any>
+  env: string
 }
 
-export type RequestData = Arrayable<ReportData>
+export type RequestData = Arrayable<Partial<ReportData>>
 
 export type CustomRequest = (data: RequestData) => Promise<any>

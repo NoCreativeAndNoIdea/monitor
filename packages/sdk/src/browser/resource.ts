@@ -1,4 +1,4 @@
-import { error } from '../common'
+import { error, reportError } from '../common'
 
 export type ResourceElement = HTMLScriptElement | HTMLLinkElement | HTMLImageElement
 
@@ -25,7 +25,15 @@ const resourceErrorInterceptor = (e: ErrorEvent) => {
   if (!isElementTarget) return false
   const url = getTargetUrl(target)
 
-  error(`Load error address: ${url}`, 'ResourceError')
+  const msg = `Load error address: ${url}`
+  error(msg, 'ResourceError')
+  reportError({
+    type: 'ResourceError',
+    message: msg,
+    data: {
+      url: url
+    }
+  })
 }
 
 export const initResourceErrorInterceptor = () => {

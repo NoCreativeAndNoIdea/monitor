@@ -1,2 +1,2 @@
-export * from '../../prisma/generated/postgre'
+export * from '@prisma/client'
 export * from './postgre.service'
